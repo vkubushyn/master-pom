@@ -2,7 +2,7 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   
   <modelVersion>4.0.0</modelVersion>
-  <groupId>com.ezyvent</groupId>
+  <groupId>com.ezvents</groupId>
   <artifactId>master-pom</artifactId>
   <packaging>pom</packaging>
   <version>1.0-SNAPSHOT</version>
@@ -22,6 +22,8 @@
     <c3p0.version>0.9.1.2</c3p0.version>
     <mysql.connector.version>5.1.20</mysql.connector.version>
     <aspectj.version>1.6.12</aspectj.version>
+    <tomcat.servlet.version>6.0.35</tomcat.servlet.version>
+    <jstl.version>1.2</jstl.version>
   </properties>
 
   <dependencyManagement>
@@ -141,6 +143,16 @@
       </dependency>
       
       <!-- Servlet -->
+      <dependency>
+        <groupId>org.apache.tomcat</groupId>
+        <artifactId>servlet-api</artifactId>
+        <version>${tomcat.servlet.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.apache.tomcat</groupId>
+        <artifactId>jsp-api</artifactId>
+        <version>${tomcat.servlet.version}</version>
+      </dependency>
       <dependency>
         <groupId>jstl</groupId>
         <artifactId>jstl</artifactId>
